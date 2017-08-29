@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title>导航</title>
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <script src="js/mui.min.js"></script>
+    <link href="css/mui.css" rel="stylesheet"/>
+    <link href="css/common.css" rel="stylesheet" />
+
+    <style>
+    	*{box-sizing: border-box;}
+    	.header{padding:15px; min-height: 300px;}
+    	.header h4{font-weight: 400;margin-bottom: 10px;}
+    	.header p{margin-bottom: 5px; font-size: 15px; color:#333;}
+		.mui-table-view.mui-grid-view .mui-table-view-cell .mui-media-body{
+			margin-top: 5px;
+			height: 18px;
+			}
+		.mui-grid-view.mui-grid-9{
+			background: #fff;
+		}
+		.mui-grid-view.mui-grid-9:after {
+		    position:absolute;
+		}
+		.mui-grid-view.mui-grid-9 .mui-media .mui-icon {
+    		font-size: 30px;
+    	}
+    	.mui-grid-view.mui-grid-9 li{
+    		min-height: 120px;
+    	}
+    	.mui-grid-view.mui-grid-9 .mui-table-view-cell > a:not(.mui-btn) {
+		    margin: 0;
+		    padding: 22px 0;
+		}
+
+    </style>
+</head>
+<body>
+
+	<div class="mui-content margin-top">
+			
+		<div class="header">
+			<h4>小丫帮</h4>
+			<p>账户余额：30分钟</p>
+			<p>话费包余额：30分钟</p>
+		</div>
+		
+		<ul class="mui-table-view mui-grid-view mui-grid-9">
+			<li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3">
+            	<a href="#">
+                    <span class="mui-icon mui-icon-chatboxes"></span>
+                    <div class="mui-media-body">账单查询</div>
+            	</a>
+            </li>
+            <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3">
+            	<a href="#">
+                    <span class="mui-icon mui-icon-home"></span>
+                    <div class="mui-media-body">套餐特惠</div>
+            	</a>
+            </li>
+            <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3">
+            	<a href="#">
+                   <span class="mui-icon mui-icon-chatbubble"></span>
+                    <div class="mui-media-body">员工管理</div>
+            	</a>
+            </li>
+
+        </ul> 
+	</div>
+
+
+</body>
+</html>

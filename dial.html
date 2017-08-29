@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+<title>云企云通讯平台</title>
+<meta name="description" content="" />
+<meta name="keywords" content="" />
+<script src="js/mui.min.js"></script>
+<link href="css/mui.css" rel="stylesheet"/>
+<link href="fonts/iconfont/iconfont.css" rel="stylesheet"/>
+<link href="css/common.css" rel="stylesheet"/>
+<link href="css/style.css" rel="stylesheet"/>
+
+</head>
+<body style="background: #fff;">
+
+<!--container-->
+<div class="mui-container margin-top">
+    
+    <div class="mui-content">
+         <div class="menu-list">
+             <a class="active" href="dial.html">拨号</a>
+             <a href="maillist.html">通讯录</a>
+             <a href="calllog.html">通话记录</a>
+         </div>   
+        <div class="dial-content">
+            <div class="mui-input-row dial-input">
+                <div class="dial-box">
+                    <label><span class="icon iconfont icon-shouji"></span></label>
+                    <input type="tel" required id="Tel" placeholder="请输入被叫号码">
+                    <span id="del" class="icon iconfont icon-Backspace colse"></span>
+                </div>
+            </div>
+            <!--keyword-->
+            <div class="keyword">
+                <ul class="mui-clearfix" id="shuzi">
+                    <li><span>1</span></li>
+                    <li><span>2</span></li>
+                    <li><span>3</span></li>
+                    <li><span>4</span></li>
+                    <li><span>5</span></li>
+                    <li><span>6</span></li>
+                    <li><span>7</span></li>
+                    <li><span>8</span></li>
+                    <li><span>9</span></li>
+                    <li><span>*</span></li>
+                    <li><span>0</span></li>
+                    <li><span>#</span></li>     
+                </ul>
+                
+                <div class="call-button"  onclick="shout();">
+                    <a ><span class="icon iconfont icon-iconfontdianhua"></span></a>
+                </div>
+            </div>
+            <!--keyword the end-->
+
+        </div>
+
+    </div>
+
+</div>
+<!--container the end-->
+<script src="js/wecall.js"></script>
+
+</body>
+</html>

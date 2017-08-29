@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+<title>云企云通讯平台</title>
+<meta name="description" content="" />
+<meta name="keywords" content="" />
+<script src="js/mui.min.js"></script>
+<link href="css/mui.css" rel="stylesheet"/>
+<link href="css/common.css" rel="stylesheet"/>
+<link href="css/style.css" rel="stylesheet"/>
+<style>
+	.requesting{
+		/*display: none;*/
+	}
+
+</style>
+</head>
+<body>
+
+<!--container-->
+<div class="mui-container margin-top">
+    
+<div class="mui-content meeting-state">
+  	<div class="state-head">
+  		<h4>第二季度销售总结会议</h4>
+  		<p><span>发起人：rock</span>会议计时：02:34:20</p>
+  	</div>
+  	
+  	
+  	<div class="mui-row meeting-grid" id="meeting-grid">
+        <div class="mui-col-xs-4 mui-col-sm-4 div-list">
+            <li class="mui-table-view-cell off-line">
+                <a href="#">
+                	<span class="user">
+                		<img src="images/0.jpg"/>
+                	</span>
+                    <h5>李总</h5> 
+                    <div class="requesting">
+                    	<div class="sk-three-bounce">
+		                    <div class="sk-child sk-bounce1"></div>
+					        <div class="sk-child sk-bounce2"></div>
+					        <div class="sk-child sk-bounce3"></div>
+				        </div>
+                    </div>
+                </a>
+            </li>
+        </div>
+        
+        <div class="mui-col-xs-4 mui-col-sm-4 div-list">
+            <li class="mui-table-view-cell">
+                
+                    <span class="user">
+                    	<img src="images/0.jpg" />
+                    </span>
+                    <h5>李总</h5>
+                    <div class="requesting">
+                    	<div class="sk-three-bounce">
+		                    <div class="sk-child sk-bounce1"></div>
+					        <div class="sk-child sk-bounce2"></div>
+					        <div class="sk-child sk-bounce3"></div>
+				        </div>
+                    </div>
+               
+            </li>
+        </div>
+        
+        <div class="mui-col-xs-4 mui-col-sm-4 div-list">
+            <li class="mui-table-view-cell">
+               
+                   <span class="user">
+                   		<img src="images/0.jpg" />
+                   </span>
+                   <h5>李总</h5> 
+                   <div class="requesting">
+                   		<div class="sk-three-bounce">
+		                    <div class="sk-child sk-bounce1"></div>
+					        <div class="sk-child sk-bounce2"></div>
+					        <div class="sk-child sk-bounce3"></div>
+				        </div>
+                   </div>
+                
+            </li>
+        </div>
+        
+        <div class="mui-col-xs-4 mui-col-sm-4 div-list">
+            <li class="mui-table-view-cell">
+                
+                   <span class="user">
+                   		<img src="images/0.jpg" />
+                   </span>
+                   <h5>李总</h5> 
+                   <div class="requesting">
+                   		<div class="sk-three-bounce">
+		                    <div class="sk-child sk-bounce1"></div>
+					        <div class="sk-child sk-bounce2"></div>
+					        <div class="sk-child sk-bounce3"></div>
+				        </div>
+                   </div>
+               
+            </li>
+        </div>
+        
+        <div class="mui-col-xs-4 mui-col-sm-4 div-list">
+            <li class="mui-table-view-cell">
+               
+                   <span class="user">
+                   		<img src="images/0.jpg" />
+                   </span>
+                   <h5>李总</h5> 
+                   <div class="requesting">
+                   	  <div class="sk-three-bounce">
+		                    <div class="sk-child sk-bounce1"></div>
+					        <div class="sk-child sk-bounce2"></div>
+					        <div class="sk-child sk-bounce3"></div>
+				        </div>
+                   </div>
+                
+            </li>
+        </div>
+        
+        <div class="mui-col-xs-4 mui-col-sm-4">
+            <li class="mui-table-view-cell">
+                <a href="personnel.html">
+                   <span class="user user-invite">
+                   		<img src="images/add-img.png" />
+                   </span>
+                   <h5>邀请</h5>   
+                </a>
+            </li>
+        </div>
+        
+   </div>
+</div>
+<!--mui-content the end-->
+</div>
+<!--container the end-->
+
+<div class="group-button">
+	<button type="button" class="btn1" id="Btn">全场静音 <i class="icon iconfont icon-jingyin" id="ico"></i></button>
+	<button type="button" onclick="alertEnd();" id="btn2">结束会议 <i class="icon iconfont icon-jieshu"></i></button>
+</div>
+
+
+<script>
+	//静音
+	var obtn=document.getElementById('Btn');
+	obtn.onclick=function (){
+		if(this.className=='btn1'){
+			this.className='btn2';
+			this.innerHTML='解除静音 <i class="icon iconfont icon-lingdang1"></i>';
+		}else{
+			this.className='btn1';
+			this.innerHTML='全场静音 <i class="icon iconfont icon-jingyin"></i>';
+		}
+	}
+
+	
+
+	function alertEnd(){
+		var btnArray = ['确定','取消'];
+		mui.confirm("您确定要结束会议？", "提示", btnArray, function(e) {
+		   	if (e.index == 0) {
+				//alert("确定");	
+				document.getElementById('btn2').style.background='#ffa7a7';
+        window.location.href="restartmeeting.html";
+		    }else if(e.index == 1){
+		    	//alert("取消");
+		    	document.getElementById('btn2').style.background='#ff7373';
+		    }
+		});
+	}
+	
+	
+	
+	//会议控制状态,移出人员
+/*	mui('#meeting-grid ').on('tap','.div-list',function(){
+		alert("确定移出?");
+		this.parentNode.removeChild(this);
+	});*/
+
+
+
+</script>
+
+</body>
+</html>

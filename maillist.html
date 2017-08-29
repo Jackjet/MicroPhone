@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+<title>云企云通讯平台</title>
+<meta name="description" content="" />
+<meta name="keywords" content="" />
+<script src="js/mui.min.js"></script>
+<link href="css/mui.css" rel="stylesheet"/>
+<link href="css/common.css" rel="stylesheet"/>
+<link href="css/style.css" rel="stylesheet"/>
+
+<style>
+	.share-box{
+		position:fixed;
+		bottom:0;
+		left: 0;
+		width: 100%;
+		padding: 15px;
+		background: #fff;
+		z-index: 999;
+	}
+</style>
+</head>
+<body>
+
+<!--container-->
+<div class="mui-container margin-top" style="background: #fff;">
+    
+    <div class="mui-content">
+         <div class="menu-list menu-tongxunlu">
+             <a href="dial.html">拨号</a>
+             <a class="active" href="maillist.html">通讯录</a>
+             <a href="calllog.html">通话记录</a>
+         </div>   
+
+          <!-- 通讯录   -->
+        <div class="address-list"> 
+            <div class="mui-content" id="box">
+              
+                <h4 class="mail-title" onclick="qyfn(this);"><i class="icon iconfont icon-cop"></i>企业通讯录<span class="icon iconfont icon-down mui-pull-right icon-xx-r" id="qy-icon"></span></h4>
+               
+                <ul class="mui-table-view view-none" id="view-none1">
+                     <li class="mui-table-view-cell">
+                        <h4>李小明<span  class="icon iconfont icon-iconfontphone"></span></h4>
+                     </li>
+                     <li class="mui-table-view-cell">
+                        <h4>李小明<span  class="icon iconfont icon-iconfontphone"></span></h4>
+                     </li>
+                     <li class="mui-table-view-cell">
+                        <h4>李小明<span  class="icon iconfont icon-iconfontphone"></span></h4>
+                     </li>
+                </ul>   
+                
+
+                <h4 class="mail-title before-h4" onclick="grfn(this);"><i class="icon iconfont icon-tongxunlu"></i>个人通讯录 <span class="icon iconfont icon-down mui-pull-right icon-xx-r" id="gr-icon"></span></h4>
+
+                
+                <ul class="mui-table-view view-none" id="view-none2">    
+                     <li class="mui-table-view-cell">
+                        <h4>李小明<a onclick="location='amend.html'" class="icon iconfont icon-weibiaoti2010104 revise-ico"></a><span  class="icon iconfont icon-iconfontphone"></span></h4>
+                     </li>
+                     <li class="mui-table-view-cell">
+                        <h4>李小明<a onclick="location='amend.html'" class="icon iconfont icon-weibiaoti2010104 revise-ico"></a><span  class="icon iconfont icon-iconfontphone"></span></h4>
+                     </li>
+                     <li class="mui-table-view-cell">
+                        <h4>李小明<a onclick="location='amend.html'" class="icon iconfont icon-weibiaoti2010104 revise-ico"></a><span  class="icon iconfont icon-iconfontphone"></span></h4>
+                     </li>
+                     <li class="mui-table-view-cell">
+                        <h4>李小明<a onclick="location='amend.html'" class="icon iconfont icon-weibiaoti2010104 revise-ico"></a><span  class="icon iconfont icon-iconfontphone"></span></h4>
+                     </li>
+                     <li class="mui-table-view-cell">
+                        <h4>李小明<a onclick="location='amend.html'" class="icon iconfont icon-weibiaoti2010104 revise-ico"></a><span  class="icon iconfont icon-iconfontphone"></span></h4>
+                     </li>
+                     <li class="mui-table-view-cell">
+                        <h4>李小明<a onclick="location='amend.html'" class="icon iconfont icon-weibiaoti2010104 revise-ico"></a><span  class="icon iconfont icon-iconfontphone"></span></h4>
+                     </li>
+                     <li class="mui-table-view-cell">
+                        <h4>李小明<a onclick="location='amend.html'" class="icon iconfont icon-weibiaoti2010104 revise-ico"></a><span  class="icon iconfont icon-iconfontphone"></span></h4>
+                     </li>
+                     <li class="mui-table-view-cell">
+                        <h4>李小明<a onclick="location='amend.html'" class="icon iconfont icon-weibiaoti2010104 revise-ico"></a><span  class="icon iconfont icon-iconfontphone"></span></h4>
+                     </li>
+                     <li class="mui-table-view-cell">
+                        <h4>李小明<a onclick="location='amend.html'" class="icon iconfont icon-weibiaoti2010104 revise-ico"></a><span  class="icon iconfont icon-iconfontphone"></span></h4>
+                     </li>
+                     <li class="mui-table-view-cell">
+                        <h4>李小明<a onclick="location='amend.html'" class="icon iconfont icon-weibiaoti2010104 revise-ico"></a><span  class="icon iconfont icon-iconfontphone"></span></h4>
+                     </li>
+                </ul>
+
+            </div>
+    </div>
+
+</div>
+
+<!--弹出框-->
+<div class="mui-popup mui-popup-in call-popup" id="Call1" style="display: none;">
+    正在回拨，请注意接听来电
+    <div class="ball-scale-multiple">
+    	<div class="cell-box">
+	        <div></div>
+	        <div></div>
+       </div>
+        <i class="icon iconfont icon-iconfontdianhua icon-dh"></i>
+    </div>
+</div>
+<div class="mui-popup-backdrop mui-active" id="layer" style="display: none;"></div>
+
+</div>
+<!--container the end-->
+
+
+<div class="add-fixed">
+	<div class="submit-button button-top share-btn">
+		<input type="button" class="mui-btn mui-btn-primary mui-btn-block add-submit" value="+ 添加个人通讯录" onclick="location='addcall.html'">
+		<input type="button" id="sharebtn" class="mui-btn mui-btn-primary mui-btn-block add-submit" value="分享给员工加入" onclick="location='formshare.html'">
+	</div>
+</div>
+
+
+<!--<script src="js/wecall.js"></script>-->
+
+<script>
+
+//呼叫弹出框
+var oCall=document.getElementById('Call1');
+var oLayer=document.getElementById('layer');
+
+function shout(){
+	oCall.style.display='block';
+	oLayer.style.display='block';
+	
+	setInterval(function shout(){
+		oCall.style.display='none';
+		oLayer.style.display='none';
+	},10000);
+}
+mui('#view-none2').on('tap','li>h4>span',shout);  //点击li>div>span时,执行shout函数
+
+
+
+//列表显示，隐藏
+function qyfn(){
+	
+	var oQy=document.getElementById('qy-icon');
+	var oView1=document.getElementById('view-none1');
+	if(oView1.style.display!='block'){
+		oView1.style.display='block';
+		oQy.className='icon iconfont icon-down mui-pull-right icon-xx-r-rotate';
+	}else{
+		oView1.style.display='none';
+		oQy.className='icon iconfont icon-down mui-pull-right icon-xx-r';
+	}
+}
+
+function grfn(){
+	var oGr=document.getElementById('gr-icon');
+	var oView2=document.getElementById('view-none2');
+	if(oView2.style.display!='block'){
+		oView2.style.display='block';
+		oGr.className='icon iconfont icon-down mui-pull-right icon-xx-r-rotate';
+	}else{
+		oView2.style.display='none';
+		oGr.className='icon iconfont icon-down mui-pull-right icon-xx-r';
+	}
+}
+
+//点击图标变色
+mui('#box').on('tap','ul li span',function(){	
+		var _this=this;
+		_this.setAttribute("class","icon iconfont icon-iconfontdianhua");
+		setTimeout(function(){
+			_this.setAttribute("class","icon iconfont icon-iconfontphone");
+		},100);
+});
+
+
+</script>
+
+</body>
+</html>

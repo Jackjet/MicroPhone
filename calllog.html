@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+<title>云企云通讯平台</title>
+<meta name="description" content="" />
+<meta name="keywords" content="" />
+<script src="js/mui.min.js"></script>
+<link href="css/mui.css" rel="stylesheet"/>
+<link href="css/common.css" rel="stylesheet"/>
+<link href="css/style.css" rel="stylesheet"/>
+
+</head>
+<body>
+
+<!--container-->
+<div class="mui-container margin-top">
+    
+    <div class="mui-content">
+         <div class="menu-list menu-tongxunlu">
+             <a href="dial.html">拨号</a>
+             <a href="maillist.html">通讯录</a>
+             <a class="active" href="calllog.html">通话记录</a>
+         </div>   
+            
+          <!-- 通话记录   -->
+        <div  id="pullrefresh" class="calllog-list"> 
+            <div class="mui-content mui-scroll-wrapper">
+                <div class="mui-scroll">
+                    <ul class="mui-table-view mui-table-view-chevron calllog-row"  id="Calllog">
+                        <li class="mui-table-view-cell">
+                           <div>李小明<p>呼出   32 分钟</p></div>
+                           <div>03-21 23:23:30</div>
+                           <div><span class="icon iconfont icon-iconfontphone"></span></div>
+                        </li>
+                        <li class="mui-table-view-cell">
+                           <div>李小明<p>呼出   32 分钟</p></div>
+                           <div>03-21 23:23:30</div>
+                           <div><span class="icon iconfont icon-iconfontphone"></span></div>
+                        </li>
+                        <li class="mui-table-view-cell">
+                           <div>李小明<p>呼出   32 分钟</p></div>
+                           <div>03-21 23:23:30</div>
+                           <div><span class="icon iconfont icon-iconfontphone"></span></div>
+                        </li>
+                        <li class="mui-table-view-cell">
+                           <div>李小明<p>呼出   32 分钟</p></div>
+                           <div>03-21 23:23:30</div>
+                           <div><span class="icon iconfont icon-iconfontphone"></span></div>
+                        </li>
+                        <li class="mui-table-view-cell">
+                           <div>李小明<p>呼出   32 分钟</p></div>
+                           <div>03-21 23:23:30</div>
+                           <div><span class="icon iconfont icon-iconfontphone"></span></div>
+                        </li>
+                        <li class="mui-table-view-cell">
+                           <div>李小明<p>呼出   32 分钟</p></div>
+                           <div>03-21 23:23:30</div>
+                           <div><span class="icon iconfont icon-iconfontphone"></span></div>
+                        </li>
+                        <li class="mui-table-view-cell">
+                           <div>李小明<p>呼出   32 分钟</p></div>
+                           <div>03-21 23:23:30</div>
+                           <div><span class="icon iconfont icon-iconfontphone"></span></div>
+                        </li>
+                        <li class="mui-table-view-cell">
+                           <div>李小明<p>呼出   32 分钟</p></div>
+                           <div>03-21 23:23:30</div>
+                           <div><span class="icon iconfont icon-iconfontphone"></span></div>
+                        </li>
+                        <li class="mui-table-view-cell">
+                           <div>李小明<p>呼出   32 分钟</p></div>
+                           <div>03-21 23:23:30</div>
+                           <div><span class="icon iconfont icon-iconfontphone"></span></div>
+                        </li>
+                        <li class="mui-table-view-cell">
+                           <div>李小明<p>呼出   32 分钟</p></div>
+                           <div>03-21 23:23:30</div>
+                           <div><span class="icon iconfont icon-iconfontphone"></span></div>
+                        </li>
+                        <li class="mui-table-view-cell">
+                           <div>李小明<p>呼出   32 分钟</p></div>
+                           <div>03-21 23:23:30</div>
+                           <div><span class="icon iconfont icon-iconfontphone"></span></div>
+                        </li>
+                        <li class="mui-table-view-cell">
+                           <div>李小明<p>呼出   32 分钟</p></div>
+                           <div>03-21 23:23:30</div>
+                           <div><span class="icon iconfont icon-iconfontphone"></span></div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<!--弹出框-->
+<div class="mui-popup mui-popup-in call-popup" id="Call1" style="display: block;">
+    正在回拨，请注意接听来电
+    <div class="ball-scale-multiple">
+    	<div class="cell-box">
+	        <div></div>
+	        <div></div>
+       </div>
+        <i class="icon iconfont icon-iconfontdianhua icon-dh"></i>
+    </div>
+</div>
+<div class="mui-popup-backdrop mui-active" id="layer" style="display: none;"></div>
+
+
+</div>
+<!--container the end-->
+
+<script src="js/wecall.js"></script>
+
+<script>
+    mui.init({
+        pullRefresh: {
+            container: '#pullrefresh',
+            down: {
+                callback: pulldownRefresh
+            },
+            up: {
+                contentrefresh: '正在加载...',
+                callback: pullupRefresh
+            }
+        }
+    });
+    /**
+     * 下拉刷新具体业务实现
+     */
+    function pulldownRefresh() {
+        setTimeout(function() {
+            var table = document.body.querySelector('.mui-table-view');
+            var cells = document.body.querySelectorAll('.mui-table-view-cell');
+            var Html='<div>李小明<p>呼出   32 分钟</p></div><div>03-21 23:23:30</div><div><span class="icon iconfont icon-iconfontphone"></span></div>';
+            for (var i = cells.length, len = i + 3; i < len; i++) {
+                var li = document.createElement('li');
+                li.className = 'mui-table-view-cell';
+                li.innerHTML = Html;
+                //下拉刷新，新纪录插到最前面；
+                table.insertBefore(li, table.firstChild);
+            }
+            mui('#pullrefresh').pullRefresh().endPulldownToRefresh(); //refresh completed
+        }, 1500);
+    }
+    var count = 0;
+    /**
+     * 上拉加载具体业务实现
+     */
+    function pullupRefresh() {
+        setTimeout(function() {
+            mui('#pullrefresh').pullRefresh().endPullupToRefresh((++count > 2)); //参数为true代表没有更多数据了。
+            var table = document.body.querySelector('.mui-table-view');
+            var cells = document.body.querySelectorAll('.mui-table-view-cell');
+            var Html='<div>李小明<p>呼出   32 分钟</p></div><div>03-21 23:23:30</div><div><span class="icon iconfont icon-iconfontphone"></span></div>';
+            for (var i = cells.length, len = i + 5; i < len; i++) {
+                var li = document.createElement('li');
+                li.className = 'mui-table-view-cell';
+                li.innerHTML = Html;
+                table.appendChild(li);
+            }
+        }, 1500);
+    }
+
+//呼叫弹出框
+var oCall=document.getElementById('Call1');
+var oLayer=document.getElementById('layer');
+function shout(){
+	oCall.style.display='block';
+	oLayer.style.display='block';
+	
+	setInterval(function shout(){
+		oCall.style.display='none';
+		oLayer.style.display='none';
+	},10000);
+}
+mui('#Calllog').on('tap','li>div>span',shout);  //点击li>div>span时,执行shout函数*/
+
+
+//点击图标变色
+mui('#Calllog').on('tap','span',function(){	
+		var _this=this;
+		_this.setAttribute("class","icon iconfont icon-iconfontdianhua");
+		setTimeout(function(){
+			_this.setAttribute("class","icon iconfont icon-iconfontphone");
+		},100);
+});
+
+</script>
+
+
+</body>
+</html>

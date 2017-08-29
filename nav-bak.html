@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title>云企云通讯平台</title>
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <script src="js/mui.min.js"></script>
+    <link href="css/mui.css" rel="stylesheet"/>
+    <link href="css/common.css" rel="stylesheet" />
+    <style>
+    	*{box-sizing: border-box;}
+    	.nav{padding:0;margin:0;}
+    	.nav li{
+    		float:left;
+    		width: 50%;
+    		padding-bottom: 2%;
+    	}
+    	.nav li a{
+    		display: block;
+    		height: 100%;
+    		height: 100%;
+    		border-radius: 5px;
+    		text-align: center;
+   			position:relative;
+    	}
+    	.nav li a img{
+    		display: block;
+    		position: absolute;
+    		width: 48px;
+    		height: 48px;
+    		top:45%;
+    		left: 50%;
+    		-webkit-transform: translate(-50%,-60%);
+    				transform: translate(-50%,-60%);
+    	}
+    	.nav li a h4{
+    		width: 100%;
+    		position: absolute;
+    		bottom:10%;
+    		font-weight: 400;
+    		color:#fff;
+    	}
+    	.nav li:nth-child(odd){
+    		padding-left: 2%;
+    		padding-right: 1%;
+    	}
+    	.nav li:nth-child(even){
+    		padding-left: 1%;
+    		padding-right: 2%;
+    	}
+    	.nav li:nth-child(1)  a{
+    		background: #f4fe4a;
+    	}
+    	.nav li:nth-child(2) a{
+    		background:#da64fe ;
+    	}
+    	.nav li:nth-child(3) a{
+    		background:#fe6488 ;
+    	}
+    	.nav li:nth-child(4) a{
+    		background:#79fe5c ;
+    	}
+    	.nav li:nth-child(5) a{
+    		background:#ffff89 ;
+    	}
+    	.nav li:nth-child(6) a{
+    		background:#fd58bd ;
+    	}
+    </style>
+</head>
+<body>
+
+	<div class="mui-content margin-top">
+		<div id="top" class="top" style="padding:15px;height: 200px;">
+			<h3>标题</h3>
+			<p>明月几时有，自己抬头瞅，明月几时有，自己抬头瞅，明月几时有，自己抬头瞅</p>
+		</div>
+		
+		<ul id="ul" class="nav clearfix">
+			<li><a href="javascript:;"><img src="images/img/tel.png"><h4>电话</h4></a></li>
+			<li><a href="javascript:;"><img src="images/img/flow.png"><h4>流量</h4></a></li>
+			<li><a href="javascript:;"><img src="images/img/chart.png"><h4>统计</h4></a></li>
+			<li><a href="javascript:;"><img src="images/img/user.png"><h4>用户</h4></a></li>
+			<li><a href="javascript:;"><img src="images/img/share.png"><h4>分享</h4></a></li>
+			<li><a href="javascript:;"><img src="images/img/settings.png"><h4>设置</h4></a></li>
+		</ul>
+
+	</div>
+		
+
+	<script>
+		window.onresize=window.onload=function(){
+			var oBody=document.querySelector('body');
+			var oTop=document.querySelector('#top');
+			var oLi=document.querySelectorAll('#ul li');
+			var Height=oBody.offsetHeight-oTop.offsetHeight;
+
+			for(var i=0;i<oLi.length;i++){
+				var num= oLi.length/2;
+				var result=Math.ceil(Height/num)+'px';
+				oLi[i].style.height=result;
+			}
+			
+		}
+	</script>
+</body>
+</html>

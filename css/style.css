@@ -1,0 +1,1145 @@
+*{
+	-webkit-touch-callout:none;
+	   -moz-touch-callout:none;
+	        touch-callout:none;
+	  -webkit-user-select:none;
+	   -khtml-user-select:none;
+	     -moz-user-select:none;
+	      -ms-user-select:none;
+	       -o-user-select:none;
+	          user-select:none;
+}
+
+/*login.html*/
+.input-box {
+	width: 80%;
+	margin: auto;
+}
+
+.title-h3 {
+	margin-top: 4rem;
+	margin-bottom: 10%;
+}
+
+.input-box form label {
+	display: block;
+	position: relative;
+}
+
+.input-box form label span {
+	position: absolute;
+	left: 10px;
+	top: 12px;
+	font-size: 24px;
+	color: #848b9c;
+}
+
+.input-box form label .user-ico {
+	font-size: 28px;
+	top: 6px;
+	left: 7px;
+}
+.input-box form label .name-ico {
+	top: 7px;
+}
+.input-box form label .tel {
+	padding-left: 40px;
+}
+
+.input-box form label .yz-code {
+	width: 60%;
+}
+
+.input-box form label .get-code {
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 38%;
+	padding: 10px 0;
+	background: #ffba16;
+	text-align: center;
+	color: #fff;
+	cursor: pointer;
+	border-radius: 4px;
+}
+
+.input-box input {
+	border: 0;
+	border-radius: 4px;
+}
+
+.btn-login {
+	font-size: 17px;
+	padding: 12px 0;
+	background: #3bb7f7;
+	border: 0;
+}
+
+/*login.html the end*/
+
+
+
+/*functionlist.html*/
+.function-list {
+	width: 100%;
+	padding: 50px 0;
+}
+
+.mui-list {
+	background: #fff;
+	border-bottom: 2px solid #f3f4ff;
+}
+
+.mui-list .cell-right, .mui-list .cell-left {
+	background: transparent;
+}
+
+.mui-list:active {
+	background: #eee;
+}
+
+.cell-left {
+	text-align: center;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+
+.cell-left h5 {
+	color: #333;
+}
+
+.cell-left .img-left {
+	/*max-width: 42px;*/
+	height: 42px;
+}
+
+.cell-right .span-right {
+	display: inline-block;
+	margin-top: 23px;
+}
+.cell-right .span-p{
+	display: inline-block;
+	margin-top: 13px;
+}
+/*functionlist.html the end*/
+/*telephonebook.html*/
+/* dial.html */
+.menu-list {
+	margin: 0 auto;
+	text-align: center;
+	background: #fff;
+	padding-top: 15px;
+}
+
+.menu-list a {
+	width: 32%;
+	display: inline-block;
+	font-size: 15px;
+	line-height: 40px;
+	color: #000;
+	position: relative;
+	padding-bottom: 5px;
+}
+.menu-list a:before{
+	content: "";
+	display: block;
+	width: 1px;
+	height: 12px;
+	background: #dfe1eb;
+	position:absolute;
+	top:14px;
+	right:-1px;
+}
+.menu-list a:last-child:before{
+	width: 0;
+}
+
+.menu-list .active:after {
+	display: block;
+	content: "";
+	width: 30px;
+	height: 3px;
+	background: #3b98f7;
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	margin: auto;
+}
+
+.menu-list .active {
+	font-weight: 700;
+}
+
+.dial-input {
+	padding: 10px 10px;
+	background: #EFEFF4;
+}
+
+.dial-input .dial-box {
+	height: 50px;
+	background: #fff;
+	position: relative;
+	border-radius: 4px;
+}
+
+.dial-input label {
+	height: 50px;
+	width: 15%;
+	color: #848b9c;
+	background: transparent;
+}
+
+.dial-input label span {
+	font-size: 30px;
+	position: absolute;
+	left: 12px;
+	top: 10px;
+}
+
+.dial-input input[type="tel"] {
+	float: left;
+	width: 65%;
+	height: 50px;
+	font-size: 2rem;
+	background: transparent;
+}
+
+.colse {
+	position: absolute;
+	top: 16px;
+	right: 6px;
+	color: #848b9c;
+	font-size: 22px;
+}
+/*keyword*/
+.keyword {
+	background: #fff;
+	padding-top: 8%;
+}
+
+.keyword ul {
+	padding: 0;
+	margin: 0;
+}
+
+.keyword ul li {
+	float: left;
+	width: 33.3%;
+	color: #333;
+	text-align: center;
+}
+
+.keyword ul li span {
+	display: block;
+	cursor: pointer;
+	padding: 22px 0;
+	font-size: 3.5rem;
+}
+
+.keyword ul li span:active {
+	background: #eee;
+}
+
+.call-button {
+	width: 80px;
+	height: 80px;
+	background: #37dd72;
+	text-align: center;
+	box-sizing: border-box;
+	margin: 8% auto 0;
+	border-radius: 50%;
+	box-shadow: 0 5px 15px rgba(55, 221, 114, 0.5);
+}
+
+.call-button a {
+	display: block;
+	padding: 28px 25px;
+	border-radius: 50%;
+}
+
+.call-button span {
+	font-size: 30px;
+	color: #fff;
+}
+
+.call-button:active {
+	background-color: #34bc65;
+}
+ 
+
+/*Maillist.html*/
+.mui-table-view:before,.mui-table-view:after {
+	height: 0;
+}
+
+.mail-title {
+	font-weight: 400;
+	color: #848b9c;
+	padding:15px 0 15px 45px;
+	margin: 0;
+	line-height:inherit;
+	position:relative;
+	background: #efeff4;
+}
+.before-h4::before{
+	content: "";
+	display: block;
+	width:100%;
+	height: 1px;
+	background: #fff;
+	position:absolute;
+	top: 0;
+	left: 0;
+	
+}
+.mail-title i {
+	font-size: 26px;
+	color: #3bb7f7;
+	margin-right: 10px;
+	position: absolute;
+    left: 10px;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+       -moz-transform: translateY(-50%);
+    		transform: translateY(-50%);
+}
+
+.mail-title .txl-icon {
+	vertical-align: middle;
+}
+
+.address-list {
+	position: relative;
+	overflow: hidden;
+	margin-top: 60px;
+	margin-bottom: 72px;
+}
+
+.mui-pull {
+	font-weight: 400;
+}
+
+.address-list .mui-pull {
+	bottom: 25px;
+	font-weight: 400;
+}
+
+.mui-icon {
+	font-size: 18px;
+}
+
+.address-list li h4,.meeting-list li h4 {
+	position: relative;
+	font-weight: 400;
+	padding-left: 24px;
+}
+
+.address-list li h4 span{
+	position: absolute;
+	top: -5px;
+	right: 0;
+	font-size: 30px;
+	color: #3bb7f7;	
+
+}
+.address-list li h4 a {
+	color: #3bb7f7;
+	position: absolute;
+	right: 56px;
+    font-size: 29px;
+    top: -4px;
+}
+
+.button-top {
+	margin-top: 10px;
+}
+
+/*calllog.html*/
+.calllog-list {
+	position: relative;
+	height: 510px;
+	min-height: 100%;
+}
+.calllog-list > div{
+    margin-top:70px;
+}
+.calllog-list .mui-table-view-cell {
+	padding-right: 15px;
+}
+
+.calllog-row .mui-table-view-cell {
+	display: flex;
+	display: -webkit-flex;
+	align-items: center;
+	-webkit-align-items: center;
+}
+
+.calllog-row .mui-table-view-cell div:nth-child(1) {
+	width: 40%;
+}
+
+.calllog-row .mui-table-view-cell div:nth-child(2) {
+	width: 50%;
+}
+
+.calllog-row .mui-table-view-cell div:nth-child(3) {
+	width: 10%;
+}
+
+.calllog-row .mui-table-view-cell div:nth-child(3) span {
+	font-size: 30px;
+	color: #3bb7f7;
+}
+
+
+/*telephonebook.html the end*/
+/*addcall.html*/
+.addcall {
+	background: #fff;
+	padding: 40px 0 10px;
+	margin-bottom: 30px;
+}
+
+.addcall .mui-content {
+	background: #fff;
+}
+
+.addcall label input {
+	border: 1px solid #cfd2e6;
+}
+
+.addcall .icon-yonghu1 {
+	top: 8px;
+}
+
+.submit-button {
+	width: 80%;
+	margin: auto;
+	text-align: center;
+	margin-top: 10px;
+}
+
+.submit-button input[type="button"], .submit-button input[type="submit"] {
+	letter-spacing: 0;
+	text-indent: 0;
+	padding: 14px 12px;
+	border: 0;
+	outline: 0;
+	margin-bottom: 10px;
+	font-size: 17px;
+	color: #fff;
+}
+
+.submit-button .remove-submit {
+	background: #ff7372;
+	border: 0;
+}
+
+.submit-button .add-submit {
+	background: #3BB7F7;
+	border: 0;
+}
+
+.submit-button .remove-submit:active {
+	background: #fb3434!important;
+	border: 0;
+}
+
+.submit-button .add-submit:active {
+	background: #007aff!important;
+}
+
+#info-div, #info-div1 {
+	display: none;
+	box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.4);
+}
+
+
+/*addcall.html the end*/
+/*amend.html*/
+
+
+
+/*meetinglist.html*/
+.meeting-list{
+
+	margin-bottom: 72px;
+
+}
+.meeting-list .mail-title .ico-end {
+	vertical-align: middle;
+}
+
+.meeting-theme .mui-table-view-radio .mui-table-view-cell .mui-navigate-right:after {
+	color: #3bb7f7;
+}
+
+.meeting-theme li {
+	position: relative;
+	vertical-align: middle;
+}
+
+.meeting-theme li i {
+	font-size: 20px;
+	margin-right: 10px;
+}
+
+.meeting-theme li .checkbox {
+	display: block;
+	width: 22px;
+	height: 22px;
+	border: 1px solid #e5e5e5;
+	position: absolute;
+	right: 14px;
+	top: 11px;
+	border-radius: 50%;
+}
+
+.meeting-ul .mui-navigate-right:after, .meeting-ul .mui-push-right:after {
+	right: 0;
+	color: #3bb7f7;
+}
+
+.mui-radio input[type='radio']:checked:before, .mui-checkbox input[type='checkbox']:checked:before {
+	color: #3bb7f7;
+}
+
+.meeting-ul p {
+	width: 90%;
+	margin-top: 12px;
+	margin-bottom: 0;
+	color: #aab2bd;
+}
+
+.meeting-ul p span {
+	display: inline-block;
+	width: 50%;
+	margin-right: 10px;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+.meeting-ul h4 > span {
+	color: #848b9c;
+}
+
+/*meetingtheme.html*/
+.list-theme input[type='text'] {
+	width: 86%;
+	height: 21px;
+	border: 0;
+	padding: 0;
+	margin-bottom: 0;
+	background-color: transparent;
+}
+
+/*personnel.html*/
+
+.item2-scroll{
+	height: 100%;
+}
+
+.tab-menu {
+	padding-top: 15px;
+	background-color: #fff;
+	position: fixed;
+	top:0;
+	left: 0;
+	z-index: 997;
+	text-align: center;
+}
+
+.tab-menu .mui-control-item{
+    font-size: 15px;
+    line-height: 40px;
+    color: #000;
+    position: relative;
+    padding-bottom: 5px;
+}
+
+.mui-segmented-control.mui-segmented-control-inverted .mui-control-item.mui-active {
+	color: #000;
+	border-bottom:0;
+	font-weight: 700;
+}
+.mui-segmented-control.mui-segmented-control-inverted .mui-control-item.mui-active:after{
+	display: block;
+	content: "";
+	width: 30px;
+	height: 3px;
+	background: #3b98f7;
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	margin: auto;	
+}
+.mui-segmented-control.mui-segmented-control-inverted .mui-control-item:before{
+	content: "";
+    display: block;
+    width: 1px;
+    height: 12px;
+    background: #dfe1eb;
+    position: absolute;
+    top: 14px;
+    right: 0px;
+}
+.mui-segmented-control.mui-segmented-control-inverted .mui-control-item:last-child:before{
+    width: 0px;
+}
+
+
+.personnel-menu a {
+	width: 48%;
+}
+.personnel .mui-table-view-cell.mui-active,.meeting-theme .mui-table-view-cell.mui-active{
+	background: transparent;
+}
+.personnel .mui-table-view-cell label,.meeting-theme .mui-table-view-cell label{
+	display: block;
+	width: 28px;
+	height: 28px;
+	position:absolute;
+	top:50%;
+	right: 20px;
+	-webkit-transform: translateY(-50%);
+			transform: translateY(-50%);
+}
+.personnel .mui-table-view-cell input[type=checkbox],.meeting-theme .mui-table-view-cell input[type=checkbox] {
+	position:static;
+}
+
+.personnel li h4 {
+	font-weight: 400;
+	padding-left: 24px;
+}
+.content-height{
+	margin-top:60px;
+	padding-bottom: 72px;
+}
+.form-fixd{
+	position: fixed;
+	top:60px;
+	left: 0;
+	width: 100%;
+	z-index: 996;
+}
+.content-height-top-130{
+	padding-top:140px;
+}
+
+/*enternumber.html*/
+.form-group.mui-input-group:after {
+	height: 0;
+}
+
+.invite {
+	padding: 15px;
+	background: #EFEFF4;
+	position: relative;
+	z-index: 99999;
+}
+
+.invite .mui-input-row {
+	height: 50px;
+	border-radius: 4px;
+}
+
+.invite .mui-input-row .row-left {
+	float: left;
+	height: 50px;
+	width: 77%;
+	background: #fff;
+	border-radius: 4px;
+}
+
+.invite label {
+	height: 50px;
+	width: 15%;
+}
+
+.invite label span {
+	font-size: 24px;
+	position: absolute;
+	top: 12px;
+	left: 10px;
+	color: #848b9c;
+}
+
+.invite input[type="tel"] {
+	height: 50px;
+	width: 85%;
+}
+
+.invite .invite-btn {
+	width: 20%;
+	padding: 16px 12px;
+	background: #3bb7f7;
+	border: 1px solid #3bb7f7;
+}
+.enternumber{
+	padding-bottom: 72px;
+	background-color: transparent;
+}
+.enternumber li {
+	padding: 18px 15px;
+	background-color: #fff;
+}
+
+.enternumber span {
+	color: #a8adb5;
+}
+
+.enternumber .cancel {
+	border: 1px solid #3bb7f7;
+	color: #3bb7f7;
+}
+
+.enternumber .cancel:active {
+	color: #fff;
+	background: #3bb7f7;
+}
+
+
+
+
+
+
+/*meetingstate.html*/
+.state-head {
+	background-color: #fff;
+	padding: 20px 30px;
+}
+
+.state-head h4 {
+	margin-bottom: 15px;
+}
+
+.state-head p {
+	margin-bottom: 0;
+}
+
+.state-head span {
+	margin-right: 15px;
+}
+
+.meeting-grid {
+	width: 100%;
+	margin: 20px auto;
+	padding-left: 10px;
+}
+
+.meeting-grid > div {
+	text-align: center;
+	padding-right: 10px;
+	padding-bottom: 10px;
+}
+
+.meeting-grid li {
+	background-color: #fff;
+	border-radius: 4px;	
+}
+.meeting-grid .requesting{
+	position:absolute;
+	left: 0;
+	top:0;
+	width: 100%;
+	height: 100%;
+	background: rgba(0,0,0,0.6);
+	z-index: 997;
+	border-radius: 4px;	
+}
+.meeting-grid .requesting img{
+	position:absolute;
+	top:50%;
+	left: 50%;
+	-webkit-transform: translate(-50%,-50%);
+	   -moz-transform: translate(-50%,-50%);
+	        transform: translate(-50%,-50%);
+}
+
+/*.meeting-grid .mui-table-view-cell > a:not(.mui-btn).mui-active{
+    background-color: #fff;
+}*/
+
+.meeting-grid h5 {
+	margin-top: 10px;
+	color: #323b43;
+}
+
+.meeting-grid .user {
+	display: inline-block;
+	border-radius: 50%;
+	overflow: hidden;
+}
+.meeting-grid .user > img{
+	width: 72px;
+	height: 72px;
+	vertical-align: middle;
+	border-radius: 50%;
+	overflow: hidden;
+}
+.off-line a{
+	-webkit-filter: grayscale(1);
+	   -moz-filter: grayscale(1);
+			filter: grayscale(1);
+}
+.off-line h5{
+	color:#9399a8;
+}
+
+.group-button {
+	width: 85%;
+	padding-bottom: 20px;
+	margin: 0 auto;
+}
+
+.group-button button {
+	padding: 12px 0;
+	width: 48%;
+	border: 0;
+	float: left;
+	margin-right: 4%;
+	color: #fff;
+	background: #3bb7f7;
+}
+
+.group-button button i {
+	vertical-align: middle;
+}
+
+.group-button button:last-child {
+	margin-right: 0;
+	background: #ff7373;
+}
+
+.group-button button:active:last-child {
+	background: #fb3434;
+}
+
+.btn1 {
+	background: #3bb7f7!important;
+}
+
+.btn2 {
+	background: #848b9c!important;
+}
+   
+       
+/*restartmeeting.html*/
+.restar h4 {
+	font-size: 17px;
+	font-weight: 400;
+	margin-bottom: 8px;
+}
+
+.restar span {
+	color: #848b9c;
+}
+
+.restar .fq-name {
+	padding-left: 17px;
+}
+
+.restar .span-no {
+	color: #3bb7f7;
+}
+
+/*
+ * 媒体查询  
+ * iphone 6plus*
+ */
+@media screen and (max-width:415px ) {
+	.keyword ul li span {
+		padding: 33px 0;
+		font-size: 4.2rem;
+	}
+
+	.call-button {
+		margin-top: 5%;
+	}
+
+	.calllog-list {
+		height: 640px;
+	}
+
+	/* .content-height{
+		height: 500px;
+	}	 */
+} 
+/*iphone 6*/
+@media screen and (max-width:376px ) {
+	.keyword ul li span {
+		padding: 23px 0;
+		font-size: 4rem;
+	}
+	.calllog-list {
+		height: 570px;
+	}
+}
+
+/*iphone 5s*/
+@media screen and (max-width:321px ) {
+	.keyword{
+		padding-top: 5%;
+	}
+	.keyword ul li span {
+		padding: 14px 0;
+		font-size: 2.8rem;
+	}
+	
+	.meeting-grid .user > img{
+		width: 58px;
+		height: 58px;
+	}
+	.calllog-list {
+		height: 442px;
+	}
+
+	.top20 {
+		margin-top: 15px !important;
+	}
+
+} 
+
+/*拨号弹出框*/
+.call-popup{
+	width: 300px;
+	background: #545455;
+	padding:20px 0;
+	color: #fff;
+	border-radius: 4px;	
+	padding-right: 50px;
+}
+.ball-scale-multiple{
+    width: 62px;
+    height: 32px;
+    position: absolute;
+    top:50%;
+    right:15px;
+    transform:translateY(-50%);
+/*    border:1px solid #fff;*/
+}
+            
+.ball-scale-multiple .cell-box{     
+    transform:rotate(-42deg);
+	-webkit-transform:rotate(-42deg);
+
+} 
+.ball-scale-multiple .cell-box> div{
+    border-top-color:transparent !important;
+    border-bottom-color:transparent!important; 
+    border-left-color:transparent !important;
+    position: absolute;
+    border:2px solid #fff;
+    border-radius: 100%;
+    opacity: 0;
+    -webkit-animation-fill-mode: both;
+            animation-fill-mode: both;
+ 
+    -webkit-animation: ball-scale-multiple 1.5s 0s linear infinite;
+            animation: ball-scale-multiple 1.5s 0s linear infinite;
+
+}
+
+.ball-scale-multiple .cell-box>div:nth-child(1){
+    width: 20px;
+    height: 12px;
+    top:3px;
+    left: 12px;
+    -webkit-animation-delay: 0.2s;
+            animation-delay: 0.2s; 
+
+}
+.ball-scale-multiple .cell-box>div:nth-child(2){
+    width: 30px;
+    height: 22px;
+    top:-2px;
+    left: 8px;
+    -webkit-animation-delay: 0.4s;
+            animation-delay: 0.4s; 
+}
+
+@-webkit-keyframes ball-scale-multiple {
+      0% {
+        -webkit-transform: scale(1);
+                transform: scale(1);
+         opacity: 0; 
+    }
+
+      5% {
+        opacity: 1; 
+        -webkit-transform: scale(1.3);
+                transform: scale(1.3);
+    }
+
+      100% {
+        -webkit-transform: scale(1);
+                transform: scale(1);
+         opacity: 0; 
+    } 
+}
+
+@keyframes ball-scale-multiple {
+      0% {
+        -webkit-transform: scale(1);
+                transform: scale(1);
+         opacity: 0;  
+    }
+
+      5% {
+        opacity: 1;
+        -webkit-transform: scale(1.3);
+                transform: scale(1.3); 
+    }
+
+      100% {
+        -webkit-transform: scale(1);
+                transform: scale(1);
+         opacity: 0;
+    } 
+}
+.icon-dh{
+	font-size: 26px!important;
+	position:absolute;
+	top:3px;
+	left: 16px;
+}
+
+
+
+
+/*通讯录样式修改*/
+.menu-tongxunlu{
+	position: fixed;
+	top:0;
+	left:0;
+	width: 100%;
+	z-index: 997;
+}
+.icon-xx-r{
+	color:#3bb7f7;
+	margin-right: 15px;
+	font-size: 30px;
+	-webkit-transition:all .5s ease;
+	   -moz-transition:all .5s ease;
+			transition:all .5s ease;
+
+			
+}
+.icon-xx-r-rotate{
+	color:#3bb7f7;
+	margin-right:15px;
+	font-size: 30px;
+
+	-webkit-transition:all .5s ease;
+	   -moz-transition:all .5s ease;
+			transition:all .5s ease;
+
+	-webkit-transform:rotate(-180deg);
+	   -moz-transform:rotate(-180deg);
+	        transform:rotate(-180deg);
+}
+.view-none{
+	display: none;
+}
+.view-none .mui-table-view-cell.mui-active {
+  background-color: #fff;
+}
+.add-fixed{
+	position: fixed;
+	left: 0;
+	right: 0;
+	bottom: 0px;
+	z-index: 997;
+	background: #fff;
+}
+.mui-scrollbar{
+	z-index: 996;
+}
+.icon-iconfontdianhua{
+	font-size: 28px;
+}
+
+
+.sk-three-bounce {
+	  width: 80px;
+	  text-align: center;
+	  position:absolute;
+	  top:50%;
+	  left:50%;
+	  -webkit-transform: translate(-50%,-50%);
+	          transform: translate(-50%,-50%);
+	}
+	.sk-three-bounce .sk-child {
+		width: 9px;
+		height: 9px;
+		background-color: #ccc;
+		border-radius: 100%;
+		display: inline-block;
+		-webkit-animation: sk-three-bounce 1.5s ease-in-out 0s infinite both;
+		        animation: sk-three-bounce 1.5s ease-in-out 0s infinite both;
+	}
+  	.sk-three-bounce .sk-bounce1 {
+    -webkit-animation-delay: -0.32s;
+            animation-delay: -0.32s; 
+  	}
+	.sk-three-bounce .sk-bounce2 {
+	    -webkit-animation-delay: -0.16s;
+	            animation-delay: -0.16s; 
+	}
+
+@-webkit-keyframes sk-three-bounce {
+	  0%, 80%, 100% {
+	    -webkit-transform: scale(0);
+	            transform: scale(0); 
+			}
+	  40% {
+	    -webkit-transform: scale(1);
+	            transform: scale(1); 
+		} 
+} 
+		
+@keyframes sk-three-bounce {
+	  0%, 80%, 100% {
+	    -webkit-transform: scale(0);
+	            transform: scale(0); 
+		}
+		40% {
+	    -webkit-transform: scale(1);
+	            transform: scale(1); 
+	    } 
+    }
+
+
+
+/*share 分享页面*/
+.share-btn{
+	width: 90%;
+}
+.share-btn input[type="button"]{
+	width: 48%;
+	font-size: 15px;
+}
+.share-btn input[type="button"]:nth-child(1){
+	float:left;
+}
+.share-btn input[type="button"]:nth-child(2){
+	float:right;
+} 
+.title-h4{
+	width: 80%;
+	margin: 4rem auto 6%;
+	padding-bottom: 5%;
+	border-bottom: 1px solid #ccc;
+	font-size: 16px;
+	padding-left:10px;
+	padding-right: 10px; 
+	line-height: 24px;
+	font-weight: 500;
+	
+}
+
+/*# sourceMappingURL=style.css.map*/
